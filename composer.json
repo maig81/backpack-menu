@@ -1,12 +1,12 @@
 {
-    "name": "greenadvertising/backpack-menu",
+    "name": "maig81/backpack-menu",
     "description": "Menu system for Backpack 4.1",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Marko Marjanovic",
-            "email": "marko.marjanovic@green-adv.com"
+            "email": "maig81@gmail.com"
         }
     ],
     "minimum-stability": "dev",
