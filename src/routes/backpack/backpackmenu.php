@@ -3,7 +3,7 @@
  * Defines the routes of Backpack
  */
 Route::group([
-    'namespace' => 'GreenAdvertising\BackpackMenu\App\Http\Controllers\Admin',
+    'namespace' => 'Maig81\BackpackMenu\App\Http\Controllers\Admin',
     'prefix' => config('backpack.laravel-backpack-menu.prefix', 'admin'),
     'middleware' => ['web', 'admin'],
 ], function () {

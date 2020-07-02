@@ -1,6 +1,6 @@
 <?php
 
-namespace GreenAdvertising\BackpackMenu\App\Http\Requests;
+namespace Maig81\BackpackMenu\App\Http\Requests;
 
 use App\Http\Requests\Request;
 use Illuminate\Foundation\Http\FormRequest;

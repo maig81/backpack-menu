@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "GreenAdvertising\\BackpackMenu\\": "src/"
+            "Maig81\\BackpackMenu\\": "src/"
         }
     }
 }
