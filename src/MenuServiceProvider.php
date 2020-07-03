@@ -1,6 +1,6 @@
 <?php
 
-namespace GreenAdvertising\BackpackMenu;
+namespace Maig81\BackpackMenu;
 
 use Illuminate\Support\ServiceProvider;
 

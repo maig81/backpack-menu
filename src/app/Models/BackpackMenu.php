@@ -1,11 +1,11 @@
 <?php
 
-namespace GreenAdvertising\BackpackMenu\App\Models;
+namespace Maig81\BackpackMenu\App\Models;
 
 
+use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
-use Illuminate\Http\Request;
 
 class BackpackMenu extends Model
 {
@@ -42,7 +42,7 @@ class BackpackMenu extends Model
 
     public function menuItems()
     {
-        return $this->hasMany('GreenAdvertising\BackpackMenu\App\Models\BackpackMenuItem', 'backpack_menu_id', 'id');
+        return $this->hasMany('Maig81\BackpackMenu\App\Models\BackpackMenuItem', 'backpack_menu_id', 'id');
     }
 
     public function menuItemsFirstLevel()

@@ -1,14 +1,15 @@
 <?php
 
-namespace GreenAdvertising\BackpackMenu\App\Http\Controllers\Admin;
+namespace Maig81\BackpackMenu\App\Http\Controllers\Admin;
 
-use GreenAdvertising\BackpackMenu\App\Http\Requests\BackpackMenuItemRequest;
-use GreenAdvertising\BackpackMenu\App\Http\Requests\BackpackMenuRequest;
+use Illuminate\Support\Facades\Request;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
-use GreenAdvertising\BackpackMenu\App\Models\BackpackMenu;
-use GreenAdvertising\BackpackMenu\App\Models\BackpackMenuItem;
-use Illuminate\Support\Facades\Request;
+
+use Maig81\BackpackMenu\App\Models\BackpackMenu;
+use Maig81\BackpackMenu\App\Models\BackpackMenuItem;
+use Maig81\BackpackMenu\App\Http\Requests\BackpackMenuRequest;
+use Maig81\BackpackMenu\App\Http\Requests\BackpackMenuItemRequest;
 
 /**
  * Class BackpackMenuCrudController
@@ -28,7 +29,7 @@ class BackpackMenuCrudController extends CrudController
 
     public function setup()
     {
-        $this->crud->setModel('GreenAdvertising\BackpackMenu\App\Models\BackpackMenu');
+        $this->crud->setModel('Maig81\BackpackMenu\App\Models\BackpackMenu');
         $this->crud->setRoute(config('backpack.base.route_prefix') . '/backpackmenu');
         $this->crud->setEntityNameStrings('Menu', 'Menus');
     }
