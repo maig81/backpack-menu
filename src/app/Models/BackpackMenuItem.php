@@ -86,6 +86,7 @@ class BackpackMenuItem extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+    
     public static function boot() {
         parent::boot();
 
