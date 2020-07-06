@@ -5,11 +5,12 @@
 
     $type_field_name = 'menu_item_type_' . $menuItem->id;
 ?>
-<div class="form-group">
+<div class="{!! isset($field['wrapper']['class']) ? $field['wrapper']['class'] : 'form-group' !!}">
     <label>{!! $field['label'] !!}</label>
-    <div class="row">
+    <div class="form-row p-0">
+
         {{-- SELECT TYPE --}}
-        <div class="col-3">
+        <div class="col pt-0">
             <select data-identifier="page_or_link_select" id="{!! $type_field_name !!}" name="{!! $type_field_name !!}" data-id="{!! $menuItem->id !!}" class="form-control js__select_type">
                 @foreach ($menuItem->getMenuOptions() as $key => $value)
                     <option value="{{ $key }}"
@@ -23,7 +24,7 @@
         </div>
 
         {{-- INPUTS --}}
-        <div class="col-4">
+        <div class="col pt-0">
             <input id="link_{!! $menuItem->id !!}" name="menu_item_link_{!! $menuItem->id !!}"
                    value="{!! $menuItem->link !!}"
                    class="form-control value-input_{!! $menuItem->id !!}"

@@ -42,16 +42,29 @@ class BackpackMenuItemCrudController extends CrudController
                 'name'  => 'name',
                 'label' => "Title",
                 'type'  => 'text',
-            ],
+                'attributes' => [
+                    'required' => 'required'
+                    ]
+                ],
             [   // Text
                 'name'  => 'backpack_menu_id',
                 'type'  => 'hidden',
                 'value' => $_GET['menu_id'] ?? null
             ],
-            [   // Text
+            [   // Defaut depth
                 'name'  => 'depth',
                 'type'  => 'hidden',
                 'value' => 1
+            ],
+            [
+                'name'  => 'lft',
+                'type'  => 'hidden',
+                'value' => 0
+            ],
+            [
+                'name'  => 'type',
+                'type'  => 'hidden',
+                'value' => 'link'
             ],
         ]);
     }

@@ -13,6 +13,10 @@
 
 @push('after_styles')
     <style>
+        .js__delete_menu_item {
+            cursor: pointer;
+        }
+
         .ui-sortable .placeholder {
             /*outline: 1px dashed #4183C4;*/
             /*-webkit-border-radius: 3px;
@@ -212,6 +216,36 @@
                     .always(function () {
                         console.log("complete");
                     });
+            });
+
+            // Delete Menu Item
+            $('.js__delete_menu_item').click(function(){
+                var result = confirm("Delete?");
+                if (result) {
+                    var token = $("meta[name='csrf-token']").attr("content");
+                    var meni_item_id = $(this).data('id');
+
+                    $.ajax({
+                        url: '{!! route('backpackmenuitem.index' ) !!}/' + meni_item_id,
+                        type: 'DELETE',
+                        data: {
+                            _token: token
+                        }
+                    })
+                        .done(function () {
+                            new Noty({
+                                type: "success",
+                                text: "<strong>{{ __('Success') }}</strong>"
+                            }).show();
+                            $('#li_' + meni_item_id ).remove();
+                        })
+                        .fail(function () {
+                            new Noty({
+                                type: "error",
+                                text: "<strong>{{ __('Error') }}</strong>"
+                            }).show();
+                        })
+                }
             });
         });
 

@@ -86,4 +86,11 @@ class BackpackMenuItem extends Model
     | MUTATORS
     |--------------------------------------------------------------------------
     */
+    public static function boot() {
+        parent::boot();
+
+        static::deleting(function($menuItem) { // before delete() method call this
+            $menuItem->children()->delete();
+        });
+    }
 }
