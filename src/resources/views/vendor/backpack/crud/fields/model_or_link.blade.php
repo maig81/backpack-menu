@@ -24,7 +24,6 @@
 
         {{-- INPUTS --}}
         <div class="col-4">
-
             <input id="link_{!! $menuItem->id !!}" name="menu_item_link_{!! $menuItem->id !!}"
                    value="{!! $menuItem->link !!}"
                    class="form-control value-input_{!! $menuItem->id !!}"

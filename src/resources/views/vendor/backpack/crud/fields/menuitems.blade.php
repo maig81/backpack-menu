@@ -1,6 +1,13 @@
 <div class="form-group col-sm-12">
-    <p>Menu items</p>
-    @include('crud::fields.single_menu_item', ['menuItems' => $entry->menuItems->where('depth', 1)])
+    <h5>Menu items</h5>
+    @if (isset($entry))
+        <a href="{!! route('backpackmenuitem.create') !!}?menu_id={!! $entry->id !!}">
+            <button type="button" class="btn btn-primary">+ {!! __('Add Menu Item') !!}</button>
+        </a>
+        @include('crud::fields.single_menu_item', ['menuItems' => $entry->menuItems->where('depth', 1)])
+    @else
+{{--        TODO add --}}
+    @endif
     <input type="hidden" name="menuItems" id="menuItems">
 </div>
 

@@ -49,10 +49,9 @@ class BackpackMenuCrudController extends CrudController
                 'name' => 'name',
                 'label' => 'Title',
             ],
-
             [   // relationship
                 'type' => "menuitems",
-                'name' => 'Test',
+                'name' => 'test',
             ]
 
 

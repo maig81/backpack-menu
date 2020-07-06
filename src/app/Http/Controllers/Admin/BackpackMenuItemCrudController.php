@@ -38,22 +38,36 @@ class BackpackMenuItemCrudController extends CrudController
         $this->crud->setValidation(BackpackMenuItemRequest::class);
 
         $this->crud->addFields([
-            [   // PageOrLink
-                'name'       => ['type', 'link', 'page_id'],
-                'label'      => "Type",
-                'type'       => 'page_or_link',
-                'page_model' => '\Backpack\PageManager\app\Models\Page'
-            ],
             [   // Text
-                'name'  => 'title',
+                'name'  => 'name',
                 'label' => "Title",
                 'type'  => 'text',
-            ]
+            ],
+            [   // Text
+                'name'  => 'backpack_menu_id',
+                'type'  => 'hidden',
+                'value' => $_GET['menu_id'] ?? null
+            ],
+            [   // Text
+                'name'  => 'depth',
+                'type'  => 'hidden',
+                'value' => 1
+            ],
         ]);
     }
 
     protected function setupUpdateOperation()
     {
-        $this->setupCreateOperation();
+        $this->crud->addFields([
+            [   // Text
+                'name'  => 'name',
+                'label' => "Title",
+                'type'  => 'text',
+            ],
+            [   // Menu Items
+                'type' => 'menuitems',
+                'name' => 'test',
+            ],
+        ]);
     }
 }
