@@ -7,6 +7,10 @@ It also has a bootstrap menu frontend blade files.
     ```
     composer require maig81/backpack-menu
     ``` 
+1. Edit `/config/app.php` and add to `providers` array
+    ```
+    Maig81\BackpackMenu\MenuServiceProvider::class,
+    ```
 1.  Publish the views, config and migrations:
     ```
     php artisan vendor:publish --provider="Maig81\BackpackMenu\MenuServiceProvider"
